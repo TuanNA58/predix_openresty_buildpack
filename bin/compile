@@ -19,7 +19,7 @@ source $compile_buildpack_dir/bin/common.sh
 BUILDPACK_PATH=$compile_buildpack_dir source $compile_buildpack_dir/compile-extensions/lib/common
 
 $compile_buildpack_dir/compile-extensions/bin/download_dependency openresty.tgz /tmp
-compile_nginx_tgz="/tmp/openresty.tgz"
+compile_nginx_tgz=$compile_buildpack_dir/openresty.tar.gz
 cd $build_dir
 
 # Alternate root location (default is root of project) for html/js/css
